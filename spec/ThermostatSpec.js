@@ -5,6 +5,7 @@ describe("Thermostat", function() {
   var thermostat;
   var temperature;
   var powerSavingMode;
+  var colour;
 
   beforeEach(function(){
   thermostat = new Thermostat();
@@ -21,6 +22,12 @@ describe("Thermostat", function() {
   it('Can switch power-saving mode off', function(){
     thermostat.setPowerSavingModeOff()
     expect(thermostat.isPowerSavingModeOn()).toBe(false)
+  });
+
+  it('Can reset temperature to 20C', function(){
+    thermostat.up()
+    thermostat.resetTemperature()
+    expect(thermostat.readTemperature()).toEqual(20);
   });
 
   it('Max temperature is 32 degrees if power saving mode is off', function(){
@@ -53,12 +60,43 @@ describe("Thermostat", function() {
     });
 
     it('Set minimum temperature at 10 degrees', function(){
-      for(var i=0; i<11; i++) {  
+      for(var i=0; i<11; i++) {
       thermostat.down();}
       expect(thermostat.readTemperature()).toEqual(10);
     });
 
   });
 
-});
+  describe("can change colour of display", function() {
 
+    it('is green below 18', function(){
+      for(var i=0; i<3; i++) {
+      thermostat.down();}
+      expect(thermostat.colour()).toEqual("green");
+    });
+
+    it('is red above 24', function(){
+      for(var i=0; i<5; i++) {
+      thermostat.up();}
+      expect(thermostat.colour()).toEqual("red");
+    });
+
+    it('is yellow at 18C', function(){
+      for(var i=0; i<2; i++) {
+      thermostat.down();}
+      expect(thermostat.colour()).toEqual("yellow");
+    });
+
+    it('is yellow at 24C', function(){
+      for(var i=0; i<4; i++) {
+      thermostat.up();}
+      expect(thermostat.colour()).toEqual("yellow");
+    });
+
+    it('is yellow at 20C', function(){
+      expect(thermostat.colour()).toEqual("yellow");
+    });
+
+  });
+
+});
