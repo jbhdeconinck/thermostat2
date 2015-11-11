@@ -36,4 +36,16 @@ describe('Feature Test', function(){
       expect(thermostat.readTemperature()).toEqual(10);
     });
 
+    // If power saving mode is on, the maximum temperature is 25 degrees
+
+    it('Checking power-saving mode is on by default', function(){
+    	expect(thermostat.isPowerSavingModeOn()).toBe(true);
+    });
+
+     it('Max temperature is 25 degrees if power saving mode is on', function(){
+     	for (var i=0; i<6; i++) {
+     	thermostat.up();}
+    	expect(thermostat.readTemperature()).toEqual(25);
+    });
+
 });
