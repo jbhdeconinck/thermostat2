@@ -1,0 +1,108 @@
+
+* {
+  background-color: red;
+}
+
+text = 16 px min
+
+Dev console: element
+
+Styles in console
+
+alt tag: can be nested in header for instance
+
+p, li {
+  font-size: 18px;
+  line-height:1.7;
+}
+
+header {
+  background-color: #555;
+  padding: 40px 0;
+}
+
+header > h1 {
+
+}
+
+header > aside {
+(put aside in the text)
+}
+
+header > img {
+  position absolute;
+  width:115px;
+  height: 115px;
+  left: 40px;
+}
+
+alt=" " > text on which you can put picture
+
+header > * {
+  text-align : center;
+}
+
+<main>: wrap around elements = marker
+--
+console/style
+element.size {
+  max-width: 580px; (vs. width) >> size of text adapts
+  margin-left: auto;
+  margin-right: auto;
+}
+--
+
+main {
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 40px
+}
+
+body {
+  margin: 0
+  color: #444; amount of red/blue/gree
+  background-color:
+  font-family: "helvetica"
+}
+
+.buttons {
+  color: green !important;
+}
+
+#button-lovely {
+  color: pink;
+  0100 = id
+}
+
+h1, h2, h3 {
+  padding-top: 40px;
+  margin-top: 0;
+  margin-bottom:
+  font-family: Georgia, Caslon, Times, serif;
+}
+
+<div class="brand">
+
+.brand {
+  position absolute;
+  width:115px;
+  height: 115px;
+  left: 40px;
+  background-image: url("");
+  background-size: countain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  background-color: yellow;
+  background-position: 0 4 px;
+}
+
+.brand:after {
+  content: "Sup!"
+  position: absolute;
+  width: 60px;
+  right: -60px;
+  background: ;
+  line-height:;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
