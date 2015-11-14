@@ -35,7 +35,7 @@ $(document).ready(function() {
   }
 
   function kelvinToCelsius(num) {
-    return num - 273.15;
+    return Math.round((num - 273.15)*10)/10;
   }
 
   $('#provide-temperature').on('click', function getWeather() {
