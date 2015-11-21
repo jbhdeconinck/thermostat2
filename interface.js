@@ -32,6 +32,7 @@ $(document).ready(function() {
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
     $('#temperature').attr('class',thermostat.colour());
+    $('#rectangle').width(thermostat.temperature * 20);
   }
 
   function kelvinToCelsius(num) {

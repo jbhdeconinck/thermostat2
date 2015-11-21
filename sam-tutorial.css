@@ -29,12 +29,6 @@ header > aside {
 (put aside in the text)
 }
 
-header > img {
-  position absolute;
-  width:115px;
-  height: 115px;
-  left: 40px;
-}
 
 alt=" " > text on which you can put picture
 
