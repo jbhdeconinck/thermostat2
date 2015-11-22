@@ -1,3 +1,9 @@
+*, *:before, *:after {
+   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .green {
   color: green;
 }
@@ -159,29 +165,53 @@ html{
   font-weight: bold;
 }
 
-#controls-power-saving {
+.one {
+  margin-top: -50px;
+  margin-right: -200px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.one .button-wrap {
+  width: 120px;
+  margin: 40px auto 0;
+  cursor: pointer;
+}
+.one .button-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 40px;
+  padding: 3px;
+  color:#fff;
+  transition:all 0.2s ease;
+}
+.one .button-switch {
+  position:relative;
+  left:0px;
+  width: 64px;
+  height: 44px;
+  border:solid 13px;
+  border-radius: 36px;
+  transition:all 0.2s ease;
+}
+.one .button-active .button-switch { left:50px; }
+.one .powersaving-off,
+.one .powersaving-on {
+  position:absolute;
+  transition:all 0.2s ease;
+  padding-top:15px;
+  font-size:0.8em;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+.one .powersaving-off { margin-left:70px; color:#dd2222;}
+.one .powersaving-on { margin-left:20px; color:#22dd22; }
+.one .button-active .powersaving-on { color:#22dd22; }
+.one .button-active .powersaving-off { color:#dd2222; }
+.one .button-active .button-bg { background-color:#000; }
+
+.button-bg {
   text-align: right;
-}
-
-#powersaving-on {
-  background:none;
-  border:none;
-  margin:0;
-  padding:0;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 10px;
-  font-weight: bold;
-}
-
-#powersaving-off {
-  background:none;
-  border:none;
-  margin:0;
-  padding:0;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
 }
 
 .rectangle {

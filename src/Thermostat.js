@@ -36,11 +36,12 @@ Thermostat.prototype.resetTemperature = function() {
 };
 
 Thermostat.prototype.setPowerSavingModeOff = function() {
-	return this.powerSavingMode = false;
+	this.powerSavingMode = false;
 };
 
 Thermostat.prototype.setPowerSavingModeOn = function() {
-	return this.powerSavingMode = true;
+	this.powerSavingMode = true;
+	if (this.temperature >= this.MAXIMUM_TEMP_IF_PSM_ON) {this.resetTemperature();}
 };
 
 Thermostat.prototype.isAtMinimumTemperature = function() {

@@ -17,13 +17,17 @@ $(document).ready(function() {
     updateTemperature();
   });
 
-  $('#powersaving-on').on('click', function(){
+  $('.button-wrap').on("click", function(){
+    $(this).toggleClass('button-active');
+  });
+
+  $('.powersaving-on').on('click', function(){
     thermostat.setPowerSavingModeOn();
     updateTemperature();
     $('#power-saving-status').text('on');
   });
 
-  $('#powersaving-off').on('click', function(){
+  $('.powersaving-off').on('click', function(){
     thermostat.setPowerSavingModeOff();
     updateTemperature();
     $('#power-saving-status').text('off');
@@ -32,7 +36,7 @@ $(document).ready(function() {
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
     $('#temperature').attr('class',thermostat.colour());
-    $('#rectangle').width(thermostat.temperature * 20);
+    $('#rectangle').width(thermostat.temperature * 19);
   }
 
   function kelvinToCelsius(num) {
