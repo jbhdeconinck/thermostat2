@@ -13,7 +13,7 @@
 }
 
 .red {
-  color: red;
+  color:#dd2222;
 }
 
 body {
@@ -226,7 +226,7 @@ html{
 #rectangle {
   position: absolute;
   height: 50px;
-  fill: red;
+  fill: #dd2222;
   top: 50%;
   margin: 0;
   padding: 0;
