@@ -62,4 +62,10 @@ $(document).ready(function() {
 
   });
 
+  $('#city-name').keypress(function(e){
+        if(e.which == 13){
+            $('#provide-temperature').click();
+        }
+    });
+
 });
